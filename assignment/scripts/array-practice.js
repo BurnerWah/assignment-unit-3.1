@@ -117,9 +117,14 @@ let gems = ["Topaz", "Citrine", "Diamond", "Emerald", "Iolite", "Tanzanite"]
 
 // 5.a (STRETCH) TODO: Replace the second gem with 'Tourmaline'.
 //      Remember to console.log the updated array.
+gems[1] = "Tourmaline"
+console.log(`Gems: ${gems}`)
 
 // 5.b (STRETCH) TODO: Sort your gems array in reverse alphabetical order.
 //     Please console.log the sorted array.
+// .sort() will already put things in alphabetical order, so reversing it is reverse alphabetical order.
+gems.sort().reverse()
+console.log(`Gems ${gems}`)
 
 // 5.c (STRETCH) TODO: Create a variable `gemString` and assign it a string value
 //     that's made up of each value from the `gems` array, but separated by the
@@ -128,12 +133,17 @@ let gems = ["Topaz", "Citrine", "Diamond", "Emerald", "Iolite", "Tanzanite"]
 //       "Emerald and Diamond and Tourmaline and Topaz"
 //     🔥 You'll need to research the .join Array method. 🔥
 //     Don't forget to console.log `gemString`...
+const gemString = gems.join(" and ")
+console.log(`gemString: ${gemString}`)
 
 // 5.d (STRETCH) TODO: Make a new array `colorfulGems` that combines
 //     the gems array with the colors array.
 //     It should look something like:
 //       ['Tourmaline', 'Topaz', 'Tanzanite', 'Iolite', 'Emerald', 'Diamond', 'yellow', 'green']
 //     Now, console.log the new array.
+// I don't think the ... operator is very fast but it's very simple to work with
+const colorfulGems = [...gems, ...colors]
+console.log(`colorfulGems: ${colorfulGems}`)
 
 // DO NOT MODIFY
 // Used for automated testing
